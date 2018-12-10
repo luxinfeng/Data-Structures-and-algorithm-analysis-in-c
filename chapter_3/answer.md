@@ -29,7 +29,9 @@ void PrintLots(L,P)  // L,P均为两个链表，打印出链表L中P链表位置
     }
   }
 }
+'''
 3.3 通过只调整指针（而不是数据）来交换两个相邻的元素
+'''
 void switch(L,l1,l2)    //单链表
 {
   Position p,h;
@@ -54,3 +56,4 @@ void switch(L,l1,l2)     //双链表
   l1->pres = l2;
   return;
 }
+'''
