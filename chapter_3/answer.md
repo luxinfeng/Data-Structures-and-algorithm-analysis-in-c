@@ -30,3 +30,27 @@ void PrintLots(L,P)  // L,P均为两个链表，打印出链表L中P链表位置
   }
 }
 3.3 通过只调整指针（而不是数据）来交换两个相邻的元素
+void switch(L,l1,l2)    //单链表
+{
+  Position p,h;
+  h = l2->next;
+  p = findprevious(L,l1);
+  l1->next = h;
+  l2->next = l1;
+  p ->next = l2;
+  return;
+}
+
+void switch(L,l1,l2)     //双链表
+{
+  Position p,h,q;
+  p = l1 ->next;
+  q = l1 ->pres;
+  l1->next = l2 ->next;
+  l2->next->pres = l1;
+  l1->pres->next = l2;
+  l2->pres = q;
+  l2->next = l1;
+  l1->pres = l2;
+  return;
+}
